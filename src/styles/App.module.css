@@ -1,5 +1,9 @@
 :root{
     --primary-color: #FF385C;
+    --hover-color: #F7F7F7;
+    --secondary-color: #575757;
+    --text-color: #222222;
+    --box-shadow: 1px -3px 24px -15px rgba(0, 0, 0, 0.75);
 }
 
 *{
@@ -19,7 +23,9 @@ html{
 
 body{
     font-family: 'Roboto', sans-serif;
-    font-size: 1.5rem;
+    font-size: 1.6rem;
+    color: var(--text-color);
+    line-height: 2rem;
 }
 .app{
     height: 100vh;
