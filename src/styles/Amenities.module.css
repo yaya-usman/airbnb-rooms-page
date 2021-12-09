@@ -1,0 +1,195 @@
+.amenities {
+  height: 100vh;
+  padding: 1rem 8rem;
+}
+
+.wrapper {
+  height: 100%;
+  padding: 0.5rem 6rem;
+  display: flex;
+  justify-content: space-between;
+  gap: 6rem;
+}
+
+/* Left */
+.left {
+  flex: 0.7;
+}
+
+.headingsContainer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: var(--border-bottom);
+  padding-bottom: 3rem;
+}
+.headings {
+  margin-top: -1.5rem;
+}
+
+.headings ul {
+  display: flex;
+  align-items: center;
+  margin-top: -1rem;
+}
+
+.headings ul li {
+  margin-right: 1rem;
+  position: relative;
+}
+
+.headings ul li:not(:last-child)::after {
+  content: ".";
+  position: absolute;
+  bottom: 0.3rem;
+  right: -0.8rem;
+}
+
+.headings h3 {
+  font-size: 22px;
+}
+
+.thumbnail {
+  height: 6rem;
+  width: 6rem;
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+.thumbnail img {
+  height: 100%;
+  object-fit: cover;
+}
+
+.features {
+  margin: 4rem auto;
+  border-bottom: var(--border-bottom);
+}
+
+.features li {
+  display: flex;
+  margin-bottom: 2rem;
+  align-items: flex-start;
+}
+
+.features li div:nth-child(2) {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.features li div:nth-child(2) span:first-child {
+  font-size: 1.6rem;
+  font-weight: 500;
+}
+
+.features li div:nth-child(2) span:nth-child(2) {
+  color: #717171;
+  font-size: 1.4rem;
+}
+
+.features li div:nth-child(2) {
+  margin-top: -0.3rem;
+}
+
+.icons {
+  transform: scale(1.9);
+  margin-right: 1.8rem;
+  color: var(--tertiary-color);
+}
+
+.translateContainer {
+  border-bottom: var(--border-bottom);
+}
+.translate {
+  width: 100%;
+  height: 5rem;
+  padding: 1rem 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border: 1px solid #000;
+  cursor: pointer;
+  border-radius: 0.8rem;
+  transition: all 0.3s ease;
+}
+.translate:hover {
+  background-color: var(--hover-color);
+}
+
+.translate span:first-child {
+  font-weight: 500;
+}
+
+.translate span:nth-child(2) {
+  transform: scale(1.5);
+}
+
+.desc {
+  display: flex;
+  flex-direction: column;
+  line-height: 2.4rem;
+}
+
+.desc > * {
+  margin-top: 2rem;
+}
+.more {
+  display: flex;
+  flex-direction: column;
+}
+
+.more span:first-child {
+  font-weight: 500;
+}
+
+.offer{
+    width: 100%;
+    padding-bottom: 6rem;
+    border-bottom: var(--border-bottom);
+}
+
+.offer h3{
+    font-size: 22px;
+    font-weight: 500;
+}
+.offerCard{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-content: space-between;
+    height: 15rem;
+    width: 20rem;
+    padding: 3rem 3rem 3rem 2.5rem;
+    border-radius: .8rem;
+    border:1px solid rgb(190, 190, 190);
+
+}
+
+
+.bedIcon > *{
+    transform: scale(1.8);
+    padding-left: .3rem;
+
+}
+.bedDesc{
+    display: flex;
+    flex-direction: column;
+}
+
+.bedDesc span:nth-child(1){
+    font-size: 1.6rem;
+    font-weight: 500;
+    /* margin-top: 1rem; */
+}
+.offerCard span:nth-child(2){
+    font-size: 1.4rem;
+}
+
+
+/* right */
+.right {
+  flex: 0.3;
+  background-color: brown;
+}
