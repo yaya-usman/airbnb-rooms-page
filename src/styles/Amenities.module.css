@@ -1,5 +1,5 @@
 .amenities {
-  height: 100vh;
+  min-height: 100vh;
   padding: 1rem 8rem;
 }
 
@@ -144,47 +144,63 @@
   font-weight: 500;
 }
 
-.offer{
-    width: 100%;
-    padding-bottom: 6rem;
-    border-bottom: var(--border-bottom);
+.bedOffer {
+  width: 100%;
+  padding-bottom: 6rem;
+  border-bottom: var(--border-bottom);
 }
 
-.offer h3{
-    font-size: 22px;
-    font-weight: 500;
+.bedOffer h3 {
+  font-size: 22px;
+  font-weight: 500;
 }
-.offerCard{
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-content: space-between;
-    height: 15rem;
-    width: 20rem;
-    padding: 3rem 3rem 3rem 2.5rem;
-    border-radius: .8rem;
-    border:1px solid rgb(190, 190, 190);
-
-}
-
-
-.bedIcon > *{
-    transform: scale(1.8);
-    padding-left: .3rem;
-
-}
-.bedDesc{
-    display: flex;
-    flex-direction: column;
+.bedOfferCard {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-content: space-between;
+  height: 15rem;
+  width: 20rem;
+  padding: 3rem 3rem 3rem 2.5rem;
+  border-radius: 0.8rem;
+  border: 1px solid rgb(190, 190, 190);
 }
 
-.bedDesc span:nth-child(1){
-    font-size: 1.6rem;
-    font-weight: 500;
-    /* margin-top: 1rem; */
+.bedIcon > * {
+  transform: scale(1.8);
+  padding-left: 0.3rem;
 }
-.offerCard span:nth-child(2){
-    font-size: 1.4rem;
+.bedDesc {
+  display: flex;
+  flex-direction: column;
+}
+
+.bedDesc span:nth-child(1) {
+  font-size: 1.6rem;
+  font-weight: 500;
+}
+.bedOfferCard span:nth-child(2) {
+  font-size: 1.4rem;
+}
+
+.offers {
+  padding-bottom: 10rem;
+}
+.offers h3 {
+  font-size: 2.2rem;
+  margin-bottom: 3rem;
+}
+
+.offerList {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin-bottom: 4rem;
+}
+
+.offerList li {
+  width: 50%;
+  margin-bottom: 2rem;
 }
 
 

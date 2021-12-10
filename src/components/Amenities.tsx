@@ -1,7 +1,10 @@
 import React from "react";
 import { CheckInModal, FeaturesItem } from "../components";
 import styles from "../styles/Amenities.module.css";
-import { TranslateOutlinedIcon, TextBtn, BedOutlinedIcon } from "../components";
+import { TextBtn, Button } from "../components";
+import TranslateOutlinedIcon from "@mui/icons-material/TranslateOutlined";
+import BedOutlinedIcon from "@mui/icons-material/BedOutlined";
+import { offerItem } from "../utils/offerItem";
 
 const Amenities = () => {
   return (
@@ -55,10 +58,11 @@ const Amenities = () => {
                   sebzelerimiz 🌶 sizler içindir 🤗🤗🌲
                 </span>
               </div>
-              <TextBtn />
-              <div className={styles.offer}>
+              <TextBtn text="Show more"/>
+              {/* bed offer */}
+              <div className={styles.bedOffer}>
                 <h3>Where you'll sleep</h3>
-                <div className={styles.offerCard}>
+                <div className={styles.bedOfferCard}>
                   <span className={styles.bedIcon}>
                     <BedOutlinedIcon />
                   </span>
@@ -67,6 +71,21 @@ const Amenities = () => {
                     <span>1 double bed</span>
                   </div>
                 </div>
+              </div>
+              {/* offers */}
+              <div className={styles.offers}>
+                <h3>What this place offers</h3>
+                <ul className={styles.offerList}>
+                  {offerItem.map((item, idx) => {
+                    return (
+                      <li key={idx}>
+                        {item.icon}
+                        {item.title}
+                      </li>
+                    );
+                  })}
+                </ul>
+                <Button text="Show all amenities" />
               </div>
             </div>
           </div>
@@ -78,17 +97,3 @@ const Amenities = () => {
 };
 
 export default Amenities;
-
-// import KeyboardArrowDownOutlinedIcon from '@mui/icons-material/KeyboardArrowDownOutlined';
-// import CollectionsOutlinedIcon from '@mui/icons-material/CollectionsOutlined';
-// import WavesOutlinedIcon from '@mui/icons-material/WavesOutlined';
-// import NetworkWifiOutlinedIcon from '@mui/icons-material/NetworkWifiOutlined';
-// import PetsOutlinedIcon from '@mui/icons-material/PetsOutlined';
-// import LocalLaundryServiceOutlinedIcon from '@mui/icons-material/LocalLaundryServiceOutlined';
-// import YardOutlinedIcon from '@mui/icons-material/YardOutlined';
-// import RestaurantOutlinedIcon from '@mui/icons-material/RestaurantOutlined';
-// import DirectionsCarFilledOutlinedIcon from '@mui/icons-material/DirectionsCarFilledOutlined';
-// import TvOutlinedIcon from '@mui/icons-material/TvOutlined';
-// import UpcomingOutlinedIcon from '@mui/icons-material/UpcomingOutlined';
-// import KeyboardOutlinedIcon from '@mui/icons-material/KeyboardOutlined';
-// import FlagIcon from '@mui/icons-material/Flag';

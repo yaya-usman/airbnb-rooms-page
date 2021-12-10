@@ -27,11 +27,11 @@ body {
   font-size: 1.6rem;
   color: var(--text-color);
   line-height: 2rem;
-  padding-bottom: 100rem;
+  /* padding-bottom: 150rem; */
 
 }
 .app {
-  height: 100vh;
+  height: 100%;
   width: 100vw;
   /* background-color: khaki; */
 }
