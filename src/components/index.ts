@@ -34,6 +34,7 @@ export { default as UpcomingOutlinedIcon } from "@mui/icons-material/UpcomingOut
 export { default as KeyboardOutlinedIcon } from "@mui/icons-material/KeyboardOutlined";
 export { default as FlagIcon } from "@mui/icons-material/Flag";
 export { default as KeyboardArrowDownOutlinedIcon } from "@mui/icons-material/KeyboardArrowDownOutlined";
+export { default as KeyboardArrowUpIcon } from "@mui/icons-material/KeyboardArrowUp";
 export { default as AccessTimeFilledIcon } from "@mui/icons-material/AccessTimeFilled";
 export { default as SmokingRoomsIcon } from "@mui/icons-material/SmokingRooms";
 export { default as SanitizerIcon } from "@mui/icons-material/Sanitizer";

@@ -1,7 +1,38 @@
+import { useState, useEffect, useRef } from "react";
 import styles from "../styles/CheckInModal.module.css";
-import { FlagIcon, KeyboardArrowDownOutlinedIcon } from "../components";
+import {
+  FlagIcon,
+  KeyboardArrowDownOutlinedIcon,
+  KeyboardArrowUpIcon,
+} from "../components";
 
 const CheckInModal = () => {
+  const activeRef = useRef<any>();
+  const [isActive, setIsActive] = useState(false);
+  const [id, setId] = useState(0);
+
+  useEffect(() => {
+    const checkIfClickedOutside = (e: any) => {
+      if (
+        isActive &&
+        activeRef.current &&
+        !activeRef.current.contains(e.target)
+      ) {
+        setIsActive(false);
+      }
+    };
+
+    document.addEventListener("click", checkIfClickedOutside);
+
+    return () => {
+      // Cleanup the event listener
+      document.removeEventListener("click", checkIfClickedOutside);
+    };
+  }, [isActive]);
+  const handleClick = (id: number) => {
+    setId(id);
+    setIsActive(!isActive);
+  };
   return (
     <div className={styles.checkIn}>
       <div className={styles.box}>
@@ -20,7 +51,13 @@ const CheckInModal = () => {
           {/* heading end */}
           {/* center-btn */}
           <div className={styles.inputs}>
-            <div className={styles.top}>
+            <div
+              ref={activeRef}
+              className={`${styles.top} ${
+                isActive && id === 1 && styles.active
+              }`}
+              onClick={() => handleClick(1)}
+            >
               <div className={styles.leftTop}>
                 <span>CHECK-IN</span>
                 <input type="text" disabled placeholder="Add date" />
@@ -30,7 +67,13 @@ const CheckInModal = () => {
                 <input type="text" disabled placeholder="Add date" />
               </div>
             </div>
-            <div className={styles.bottom}>
+            <div
+              ref={activeRef}
+              className={`${styles.bottom} ${
+                isActive && id === 2 && styles.active
+              }`}
+              onClick={() => handleClick(2)}
+            >
               <div className={styles.leftBottom}>
                 <span>GUESTS</span>
                 <ul>
@@ -40,7 +83,11 @@ const CheckInModal = () => {
                 </ul>
               </div>
               <div className={styles.rightBottom}>
-                <KeyboardArrowDownOutlinedIcon />
+                {!isActive ? (
+                  <KeyboardArrowDownOutlinedIcon />
+                ) : (
+                  <KeyboardArrowUpIcon />
+                )}
               </div>
             </div>
           </div>
