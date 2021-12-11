@@ -35,8 +35,8 @@ const CheckInModal = () => {
                 <span>GUESTS</span>
                 <ul>
                   <li>1 guest</li>
-                  <li></li>
-                  <li></li>
+                  {/* <li>1 guest</li> */}
+                  {/* <li>1 guest</li> */}
                 </ul>
               </div>
               <div className={styles.rightBottom}>
