@@ -8,12 +8,12 @@
   padding: 0.5rem 6rem;
   display: flex;
   justify-content: space-between;
-  gap: 6rem;
+  gap: 10rem;
 }
 
 /* Left */
 .left {
-  flex: 0.7;
+  flex: 0.65;
 }
 
 .headingsContainer {
@@ -63,7 +63,7 @@
 
 .features {
   margin: 4rem auto;
-  border-bottom: var(--border-bottom);
+  /* border-bottom: var(--border-bottom); */
 }
 
 .features li {
@@ -206,6 +206,8 @@
 
 /* right */
 .right {
-  flex: 0.3;
-  background-color: brown;
+  flex: 0.35;
+  background-color: transparent;
+  position: relative;
+
 }

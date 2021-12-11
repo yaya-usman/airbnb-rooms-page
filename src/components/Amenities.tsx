@@ -1,7 +1,6 @@
 import React from "react";
-import { CheckInModal, FeaturesItem } from "../components";
 import styles from "../styles/Amenities.module.css";
-import { TextBtn, Button } from "../components";
+import { TextBtn, Button,CheckInModal,FeaturesItem } from "../components";
 import TranslateOutlinedIcon from "@mui/icons-material/TranslateOutlined";
 import BedOutlinedIcon from "@mui/icons-material/BedOutlined";
 import { offerItem } from "../utils/offerItem";
@@ -90,7 +89,7 @@ const Amenities = () => {
             </div>
           </div>
         </div>
-        <div className={styles.right}>CheckInModal</div>
+        <div className={styles.right}><CheckInModal /></div>
       </div>
     </section>
   );

@@ -1,6 +1,6 @@
 import React from "react";
 import styles from "./styles/App.module.css";
-import { Navbar,Header,Amenities,Awareness } from "./components";
+import { Navbar,Header,Amenities,Awareness,Reviews } from "./components";
 
 function App() {
   return (
@@ -8,6 +8,7 @@ function App() {
       <Navbar />
       <Header />
       <Amenities />
+      <Reviews />
       <Awareness />
     </div>
   );

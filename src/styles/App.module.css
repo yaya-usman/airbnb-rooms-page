@@ -1,12 +1,12 @@
 :root {
   --primary-color: #ff385c;
+  --primary-color2: #E01759;
   --hover-color: #f7f7f7;
   --secondary-color: #575757;
   --text-color: #222222;
   --tertiary-color: #747474;
   --box-shadow: 1px -3px 24px -15px rgba(0, 0, 0, 0.75);
   --border-bottom:  1px solid rgb(190, 190, 190);
-
 }
 * {
   margin: 0;

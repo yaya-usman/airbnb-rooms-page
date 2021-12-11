@@ -7,10 +7,10 @@ export { default as FeaturesItem } from "./FeaturesItem";
 export { default as TextBtn } from "./TextBtn";
 export { default as Button } from "./Button";
 export { default as Awareness } from "./Awareness";
+export { default as Reviews } from "./Reviews";
 
 
-//icons
-
+//mui icons
 export { default as HomeOutlinedIcon } from "@mui/icons-material/HomeOutlined";
 export { default as AutoAwesomeOutlinedIcon } from "@mui/icons-material/AutoAwesomeOutlined";
 export { default as AutoAwesomeIcon } from "@mui/icons-material/AutoAwesome";
@@ -40,7 +40,3 @@ export { default as SanitizerIcon } from "@mui/icons-material/Sanitizer";
 export { default as ErrorIcon } from "@mui/icons-material/Error";
 export { default as CheckCircleIcon } from "@mui/icons-material/CheckCircle";
 
-
-// import SmokingRoomsIcon from '@mui/icons-material/SmokingRooms';
-// import SanitizerIcon from '@mui/icons-material/Sanitizer';
-// import CheckCircleIcon from '@mui/icons-material/CheckCircle';
