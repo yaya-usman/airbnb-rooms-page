@@ -68,7 +68,9 @@
   background-color: black;
   opacity: 0.2;
 }
-.imgSlide{
+
+
+.carousel{
   display: none;
 }
 
@@ -79,7 +81,7 @@
   }
 }
 
-/* 
+
 @media screen and (max-width: 775px) {
  .allBtn{
   display: none;
@@ -88,11 +90,11 @@
  .gallery{
    display: flex;
   }
-  .imgSlide{
-    display: inline-block;
+  .carousel{
+    display: flex;
    
   }
   
-} */
+}
 
 

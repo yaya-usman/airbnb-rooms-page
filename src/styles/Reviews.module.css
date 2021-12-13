@@ -146,18 +146,37 @@
 
 
 /* MEDIA QUERIES */
-@media screen and (max-width: 1200px) {
+@media screen and (max-width: 1201px) {
   .reviews{
     padding: 1rem 6rem;
   }
   .wrapper{
     padding: 3rem 0;
   }
-
 }
+
+
+
 @media screen and (max-width: 800px) {
   .reviews{
     padding: 1rem 3rem;
   }
 }
+
+
+@media screen and (max-width: 615px) {
+  .ratings ul li{
+    display: flex;
+    flex-direction: column;
+  }
+
+}
+
+
+@media screen and (max-width: 380px) {
+  .ratings{
+    gap: 2rem;
+  }
+}
+
 

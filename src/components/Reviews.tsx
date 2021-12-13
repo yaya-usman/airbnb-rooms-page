@@ -2,6 +2,7 @@ import styles from "../styles/Reviews.module.css";
 import { Button, List } from "../components";
 import { reviewComments } from "../utils/reviewComments";
 import { Carousel } from "@trendyol-js/react-carousel";
+import { useEffect, useState } from "react";
 
 const Reviews = () => {
   return (
@@ -80,9 +81,29 @@ const RatingList = () => {
 
 //Review List Item
 const ReviewListItem = () => {
+  const [width, setWidth] = useState<number>(window.innerWidth);
+  const updateDimensions = () => {
+    setWidth(window.innerWidth);
+  };
+  useEffect(() => {
+    window.addEventListener("resize", updateDimensions);
+    return () => window.removeEventListener("resize", updateDimensions);
+  }, []);
+  const [showNum, setShowNum] = useState<number>(2.5);
+
+  useEffect(() => {
+    if (width <= 540) {
+      setShowNum(2);
+    }
+    if (width <= 375) {
+      setShowNum(1);
+    }
+    console.log(showNum);
+  }, [showNum]);
+
   return (
     <ul className={styles.reviewList}>
-      <Carousel show={3.5} slide={3} swiping={true}>
+      <Carousel show={showNum} slide={3} swiping={true}>
         {reviewComments.map((review) => {
           return (
             <List
@@ -97,8 +118,6 @@ const ReviewListItem = () => {
           );
         })}
       </Carousel>
-
-      {/* <List /> */}
     </ul>
   );
 };

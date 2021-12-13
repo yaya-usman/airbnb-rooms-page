@@ -41,3 +41,10 @@ body {
     font-size: 58%;
   }
 }
+
+
+@media screen and (max-width: 965px){
+  html{
+    font-size: 50%;
+  }
+}
