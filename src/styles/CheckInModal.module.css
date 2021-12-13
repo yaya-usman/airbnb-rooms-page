@@ -171,7 +171,6 @@
   }
 }
 
-
 @media screen and (max-width: 800px) {
   .content {
     padding: 1.5rem;
@@ -190,40 +189,28 @@
   .heading h4 i {
     transform: scale(0.6);
   }
-  
-.heading h4 a{
-  display: none;
-}
+
+  .heading h4 a {
+    display: none;
+  }
 }
 
 @media screen and (max-width: 735px) {
-  .content{
+  .content {
     flex-direction: row;
     padding: 1.8rem;
   }
-  .issue,.inputs{
+  .issue,
+  .inputs {
     display: none;
   }
-  .heading{
+  .heading {
     flex-direction: column;
-  }
-  .checkIn{
-    /* width: 70%; */
-    position: fixed;
-    left: 0;
-    top: 0;
-    top: 120rem;
-  }
-
-  .checkBtn{
-    width: 40%;
-    padding: 1.5rem 1.8rem;
   }
 }
 
-
 @media screen and (max-width: 600px) {
-  .checkBtn{
+  .checkBtn {
     width: 65%;
   }
 }

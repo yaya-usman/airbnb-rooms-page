@@ -127,30 +127,19 @@
 }
 
 @media screen and (max-width: 878px) {
-  .left{
-      flex: .5;
-      z-index: 10;
-   
-  }
-  .center{
-    flex: 2;
-    margin-left: -9.8rem;
-    z-index: 100;
-  }
-  .right{
-    flex: 1;
+  .left {
+    display: none;
   }
 }
 
 @media screen and (max-width: 800px) {
   .navbar {
-    padding: 1rem 3rem;
+    padding: 2rem 3rem;
   }
 }
 
-
-@media screen and (max-width: 600px) {
-  .navbar{
+@media screen and (max-width: 480px) {
+  .navbar {
     display: none;
   }
 }

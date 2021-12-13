@@ -4,7 +4,7 @@ import { IReviews } from "../utils/reviewComments";
 
 const List = (props: IReviews) => {
   return (
-      <li key={props.id}>
+      <li>
         <div className={styles.reviewHeading}>
           <div className={styles.pfp}>
             <img

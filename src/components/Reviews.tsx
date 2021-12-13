@@ -82,6 +82,7 @@ const RatingList = () => {
 //Review List Item
 const ReviewListItem = () => {
   const [width, setWidth] = useState<number>(window.innerWidth);
+  const [showNum, setShowNum] = useState<number>(2.5);
   const updateDimensions = () => {
     setWidth(window.innerWidth);
   };
@@ -89,7 +90,6 @@ const ReviewListItem = () => {
     window.addEventListener("resize", updateDimensions);
     return () => window.removeEventListener("resize", updateDimensions);
   }, []);
-  const [showNum, setShowNum] = useState<number>(2.5);
 
   useEffect(() => {
     if (width <= 540) {
@@ -107,7 +107,8 @@ const ReviewListItem = () => {
         {reviewComments.map((review) => {
           return (
             <List
-              id={review.id}
+            id = {review.id}
+              key={review.id}
               nameAval={review.nameAval}
               name={review.name}
               pfpAval={review.pfpAval}
