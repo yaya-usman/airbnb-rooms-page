@@ -1,5 +1,5 @@
 .checkIn {
-  height: 32rem;
+  height: auto;
   position: sticky;
   top: 3rem;
   left: 0;
@@ -15,6 +15,7 @@
   border-radius: 0.7rem;
   border: var(--border-bottom);
   margin-bottom: 5rem;
+  width: 100%;
 }
 
 .content {
@@ -22,6 +23,7 @@
   display: flex;
   flex-direction: column;
   align-items: flex-start;
+  position: relative;
 }
 
 .heading {
@@ -53,24 +55,24 @@
 }
 
 .inputs {
-  height: auto;
   width: 100%;
-  margin: 3rem auto;
+  margin: 2rem auto;
   display: flex;
   flex-direction: column;
   border: var(--border-bottom);
   border-radius: 0.7rem;
 }
 
-.inputs input {
-  background: transparent;
+.inputs span:nth-child(2) {
+  color: #999;
+  font-size: 1.4rem;
+  font-weight: 400;
 }
 
 .top,
 .bottom {
   display: flex;
   align-items: center;
-  justify-content: space-between;
   cursor: pointer;
   border: 2px solid transparent;
 }
@@ -83,6 +85,8 @@
 
 .bottom {
   border-top: var(--border-bottom);
+  display: flex;
+  justify-content: space-between;
 }
 
 .top > * {
@@ -93,12 +97,21 @@
 
 .leftTop {
   border-right: var(--border-bottom);
+  width: 50%;
+  display: flex;
+  flex-direction: column;
 }
 
 .leftTop span {
   justify-self: flex-start;
   text-align: left;
   margin: 0;
+}
+
+.rightTop {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
 }
 
 .bottom > * {
@@ -142,11 +155,6 @@
   opacity: 0.95;
 }
 
-.issue {
-  display: flex;
-  align-items: center;
-}
-
 .issue span {
   margin-right: 1rem;
 }
@@ -154,4 +162,68 @@
 .issue span > * {
   transform: scale(1.2);
   color: #999;
+}
+
+/* MEDIA QUERIES */
+@media screen and (max-width: 1024px) {
+  .box {
+    width: 100%;
+  }
+}
+
+
+@media screen and (max-width: 800px) {
+  .content {
+    padding: 1.5rem;
+  }
+  .heading h3 span:first-child {
+    font-size: 2rem;
+  }
+
+  .heading h3 span:nth-child(2) {
+    font-size: 1.4rem;
+  }
+
+  .heading h4 {
+    font-size: 1.2rem;
+  }
+  .heading h4 i {
+    transform: scale(0.6);
+  }
+  
+.heading h4 a{
+  display: none;
+}
+}
+
+@media screen and (max-width: 735px) {
+  .content{
+    flex-direction: row;
+    padding: 1.8rem;
+  }
+  .issue,.inputs{
+    display: none;
+  }
+  .heading{
+    flex-direction: column;
+  }
+  .checkIn{
+    width: 100%;
+    position: fixed;
+    left: 0;
+    top: 0;
+    top: 120rem;
+  }
+
+  .checkBtn{
+    width: 40%;
+    padding: 1.5rem 1.8rem;
+  }
+}
+
+
+@media screen and (max-width: 600px) {
+  .checkBtn{
+    width: 65%;
+  }
 }

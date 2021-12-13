@@ -8,6 +8,7 @@ export { default as TextBtn } from "./TextBtn";
 export { default as Button } from "./Button";
 export { default as Awareness } from "./Awareness";
 export { default as Reviews } from "./Reviews";
+export { default as List } from "./List";
 
 
 //mui icons

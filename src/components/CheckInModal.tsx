@@ -19,6 +19,7 @@ const CheckInModal = () => {
         !activeRef.current.contains(e.target)
       ) {
         setIsActive(false);
+        setId(0);
       }
     };
 
@@ -60,11 +61,11 @@ const CheckInModal = () => {
             >
               <div className={styles.leftTop}>
                 <span>CHECK-IN</span>
-                <input type="text" disabled placeholder="Add date" />
+                <span>Add date</span>
               </div>
               <div className={styles.rightTop}>
                 <span>CHECKOUT</span>
-                <input type="text" disabled placeholder="Add date" />
+                <span>Add date</span>
               </div>
             </div>
             <div
@@ -83,10 +84,10 @@ const CheckInModal = () => {
                 </ul>
               </div>
               <div className={styles.rightBottom}>
-                {!isActive ? (
-                  <KeyboardArrowDownOutlinedIcon />
-                ) : (
+                {isActive && id === 2 ? (
                   <KeyboardArrowUpIcon />
+                ) : (
+                  <KeyboardArrowDownOutlinedIcon />
                 )}
               </div>
             </div>

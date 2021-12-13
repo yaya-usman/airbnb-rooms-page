@@ -1,12 +1,12 @@
 :root {
   --primary-color: #ff385c;
-  --primary-color2: #E01759;
+  --primary-color2: #e01759;
   --hover-color: #f7f7f7;
   --secondary-color: #575757;
   --text-color: #222222;
   --tertiary-color: #747474;
   --box-shadow: 1px -3px 24px -15px rgba(0, 0, 0, 0.75);
-  --border-bottom:  1px solid rgb(190, 190, 190);
+  --border-bottom: 1px solid rgb(190, 190, 190);
 }
 * {
   margin: 0;
@@ -27,11 +27,17 @@ body {
   font-size: 1.6rem;
   color: var(--text-color);
   line-height: 2rem;
-  /* padding-bottom: 150rem; */
-
+  overflow-x: hidden;
 }
 .app {
+  width: 100%;
   height: 100%;
-  width: 100vw;
-  /* background-color: khaki; */
+  position: relative;
+}
+
+
+@media screen and (max-width: 965px){
+  html{
+    font-size: 58%;
+  }
 }

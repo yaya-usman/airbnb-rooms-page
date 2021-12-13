@@ -1,8 +1,9 @@
 import styles from "../styles/Reviews.module.css";
-import { Button } from "../components";
+import { Button, List } from "../components";
+import { reviewComments } from "../utils/reviewComments";
+import { Carousel } from "@trendyol-js/react-carousel";
 
 const Reviews = () => {
-  const testArr = [1, 2, 3, 4, 5, 6];
   return (
     <div className={styles.reviews}>
       <div className={styles.wrapper}>
@@ -17,7 +18,7 @@ const Reviews = () => {
         <div className={styles.reviewers}>
           <ReviewListItem />
         </div>
-        <Button text="Show all 52 reviews"/>
+        <Button text="Show all 52 reviews" />
       </div>
     </div>
   );
@@ -78,131 +79,26 @@ const RatingList = () => {
 };
 
 //Review List Item
-const ReviewListItem = (item: any) => {
+const ReviewListItem = () => {
   return (
-    <ul>
-      {/* left */}
-      <div>
-        <li>
-          <div className={styles.reviewHeading}>
-            <div className={styles.pfp}>
-              <img
-                src={
-                  "https://a0.muscache.com/defaults/user_pic-225x225.png?im_w=240"
-                }
-                alt="profile pic"
-              />
-            </div>
-            <div className={styles.author}>
-              <span>Anonymous</span>
-              <span>November,2021</span>
-            </div>
-          </div>
-          <div className={styles.comment}>
-            <p>Hello world</p>
-          </div>
-        </li>
-        <li>
-          <div className={styles.reviewHeading}>
-            <div className={styles.pfp}>
-              <img
-                src={
-                  "https://a0.muscache.com/defaults/user_pic-225x225.png?im_w=240"
-                }
-                alt="profile pic"
-              />
-            </div>
-            <div className={styles.author}>
-              <span>Anonymous</span>
-              <span>November,2021</span>
-            </div>
-          </div>
-          <div className={styles.comment}>
-            <p>Hello world</p>
-          </div>
-        </li>
-        <li>
-          <div className={styles.reviewHeading}>
-            <div className={styles.pfp}>
-              <img
-                src={
-                  "https://a0.muscache.com/defaults/user_pic-225x225.png?im_w=240"
-                }
-                alt="profile pic"
-              />
-            </div>
-            <div className={styles.author}>
-              <span>Anonymous</span>
-              <span>November,2021</span>
-            </div>
-          </div>
-          <div className={styles.comment}>
-            <p>Hello world</p>
-          </div>
-        </li>
-      </div>
+    <ul className={styles.reviewList}>
+      <Carousel show={3.5} slide={3} swiping={true}>
+        {reviewComments.map((review) => {
+          return (
+            <List
+              id={review.id}
+              nameAval={review.nameAval}
+              name={review.name}
+              pfpAval={review.pfpAval}
+              comment={review.comment}
+              date={review.date}
+              pfpSrc={review.pfpSrc}
+            />
+          );
+        })}
+      </Carousel>
 
-
-      {/* right */}
-      <div>
-        <li>
-          <div className={styles.reviewHeading}>
-            <div className={styles.pfp}>
-              <img
-                src={
-                  "https://a0.muscache.com/defaults/user_pic-225x225.png?im_w=240"
-                }
-                alt="profile pic"
-              />
-            </div>
-            <div className={styles.author}>
-              <span>Anonymous</span>
-              <span>November,2021</span>
-            </div>
-          </div>
-          <div className={styles.comment}>
-            <p>Hello world</p>
-          </div>
-        </li>
-        <li>
-          <div className={styles.reviewHeading}>
-            <div className={styles.pfp}>
-              <img
-                src={
-                  "https://a0.muscache.com/defaults/user_pic-225x225.png?im_w=240"
-                }
-                alt="profile pic"
-              />
-            </div>
-            <div className={styles.author}>
-              <span>Anonymous</span>
-              <span>November,2021</span>
-            </div>
-          </div>
-          <div className={styles.comment}>
-            <p>Hello world</p>
-          </div>
-        </li>
-        <li>
-          <div className={styles.reviewHeading}>
-            <div className={styles.pfp}>
-              <img
-                src={
-                  "https://a0.muscache.com/defaults/user_pic-225x225.png?im_w=240"
-                }
-                alt="profile pic"
-              />
-            </div>
-            <div className={styles.author}>
-              <span>Anonymous</span>
-              <span>November,2021</span>
-            </div>
-          </div>
-          <div className={styles.comment}>
-            <p>Hello world</p>
-          </div>
-        </li>
-      </div>
+      {/* <List /> */}
     </ul>
   );
 };
