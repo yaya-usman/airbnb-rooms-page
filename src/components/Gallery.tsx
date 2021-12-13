@@ -39,8 +39,8 @@ const Gallery = () => {
 
       <div className={styles.carousel}>
         <Carousel show={3.5} slide={3} swiping={true}>
-          {images.map((item) => {
-            return <img src={item.url} className={styles.carousel} />;
+          {images.map((item,idx) => {
+            return <img key={idx} src={item.url} className={styles.carousel} />;
           })}
         </Carousel>
       </div>

@@ -95,10 +95,9 @@ const ReviewListItem = () => {
     if (width <= 540) {
       setShowNum(2);
     }
-    if (width <= 375) {
+    if (width <= 450) {
       setShowNum(1);
     }
-    console.log(showNum);
   }, [showNum]);
 
   return (
@@ -107,7 +106,7 @@ const ReviewListItem = () => {
         {reviewComments.map((review) => {
           return (
             <List
-            id = {review.id}
+              id={review.id}
               key={review.id}
               nameAval={review.nameAval}
               name={review.name}
