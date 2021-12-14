@@ -4,7 +4,7 @@
 
 
 
-__Original page:__ [](https://www.airbnb.com/rooms/46019676?federated_search_id=4c83bd2e-8b2f-4eec-b8ba-2b3fc98dad39&source_impression_id=p3_1638962521_rclR%2FDj6Le%2FWhzDo&guests=1&adults=1&translate_ugc=false)
+__Original page:__ [view](https://www.airbnb.com/rooms/46019676?federated_search_id=4c83bd2e-8b2f-4eec-b8ba-2b3fc98dad39&source_impression_id=p3_1638962521_rclR%2FDj6Le%2FWhzDo&guests=1&adults=1&translate_ugc=false)
 
 
 __My minified version:__ [Live view](https://test-airbnb.netlify.app/)
