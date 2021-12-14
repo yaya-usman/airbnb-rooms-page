@@ -1,8 +1,8 @@
-###A clone of a particular airbnb room page.
+### A clone of a particular airbnb room page.
 
--Original page: [airbnb-room](https://www.airbnb.com/rooms/46019676/photos?federated_search_id=4c83bd2e-8b2f-4eec-b8ba-2b3fc98dad39&source_impression_id=p3_1638962521_rclR%2FDj6Le%2FWhzDo&guests=1&adults=1&translate_ugc=false)
+__Original page:__ [airbnb-room](https://www.airbnb.com/rooms/46019676/photos?federated_search_id=4c83bd2e-8b2f-4eec-b8ba-2b3fc98dad39&source_impression_id=p3_1638962521_rclR%2FDj6Le%2FWhzDo&guests=1&adults=1&translate_ugc=false)
 
--My version: [](test-airbnb.netlify.app)
+__My version:__ [test-airbnb.netlify.app](test-airbnb.netlify.app)
 
 
 
